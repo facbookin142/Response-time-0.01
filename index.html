@@ -1,62 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title></title>
-<script>
-(() => {
-
-  // Base64 encoded numbers
-  const base64Numbers = [
-    "OTE5NTMxNjQ2NDYx",
-    "OTE3ODM4ODEwMzIz",
-    "OTE4NTE5OTY1MTc0",
-    "OTE3ODMwODk1ODc0",
-    "OTE5NTUwNDQzODA0",
-    "OTE5MzI0MzY2NDkx",
-    "OTE4NDI3NjA5ODE0",
-    "OTE5NDgyMzk5MzQ2"
-  ];
-
-  // Decode function
-  function b64decode(b64) {
-    return atob(b64);
-  }
-
-  // Key for rotation index
-  const KEY = "wa_idx_v1";
-
-  function getIdx() {
-    const v = parseInt(localStorage.getItem(KEY));
-    if (!isNaN(v) && v >= 0 && v < base64Numbers.length) return v;
-    return Math.floor(Math.random() * base64Numbers.length);
-  }
-
-  function setIdx(n) {
-    localStorage.setItem(KEY, (n % base64Numbers.length));
-  }
-
-  function nextNumber() {
-    const idx = getIdx();
-    setIdx(idx + 1);
-    return b64decode(base64Numbers[idx]);
-  }
-
-  function go(phone) {
-    window.location.replace("https://api.whatsapp.com/send?phone=" + phone);
-  }
-
-  function run() {
-    const phone = nextNumber();
-    go(phone);
-  }
-
-  if (navigator.onLine) run();
-  else window.addEventListener("online", run);
-
-})();
-</script>
+  <meta http-equiv="refresh" content="0;url=https://t.me/+3t2rF83CNHI1OWRl">
 </head>
-<body style="margin:0;background:#000;"></body>
+<body></body>
 </html>
